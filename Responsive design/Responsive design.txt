@@ -1,0 +1,45 @@
+Responsive Design
+
+ 	1. viewport
+ 	2. Media Queries
+ 		A way that helps not to apply CSS to a particular HTML element instead applying it to a particualar HTML element on a particular type of media (different screen sizes, phone, website after printing it).
+
+ 	3. Flexbox
+ 	4. Grids
+
+
+ <!-- 2. Media Queries -->
+
+ @media print {}	
+ 	To select printer specific CSS
+
+ @media (min-width = 500px)
+ @media (max-height = 499px) etc etc.
+ 	To select width/height specific CSS
+
+<!-- 3. Flexbox -->
+
+	If you want a tabular structure in your web-page having several rows and columns, It must be re-arranged with fewer columns and more rows while transferring to smaller devices.
+	E.g, You have a tabular structure with 12 items, arranged in 3*4 table (Rows:3, Cols: 4)
+	If it will be viewed on a tablet, structure must be: 4*3
+	It it will be viewed on a mobile, structure must be: 6*2 or 12*1.
+
+	This can be achieved by CSS Flexbox...
+	.container{			// The outmost div
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+<!-- 4. Grid -->
+	
+	If you want a grid layout i.e mostly useful in strcturing your webpage in a column like manner, then it is useful.
+	You can make a column (say leftmost) the menu/sidebar that is absolute at the leftmost position and the content on right side, which can be adjusted accoring to the size of the screen.
+
+	This can be achieved by CSS Grid...
+	.grid {				// The outmost div
+		display: grid;
+		grid-template-columns: 200px 200px auto
+					[Make the first two columns 200px absolute, and then adjust the third column according to the width of the device screen.]
+		grid-column-gap: 20px;
+		grid-row-gap: 10px;
+	}

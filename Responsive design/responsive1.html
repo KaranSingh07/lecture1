@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My web page</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- This line tells the browser to adjust the viewport according to the device it is been viewed i.e for a mobile it'll be smaller and for a computer it'll larger. 
+		Width will be adjusted to the width of the screen-->
+
+	<style type="text/css">
+		@media (min-width: 600px) {
+			p::before {
+				content: "Welcome to my web page!";
+			}
+		}
+
+		@media (max-width: 599px) {
+			p::before {
+				content: "Welcome!";
+			}
+		}
+	</style>
+</head>
+<body>
+	<p>
+		
+	</p>
+</body>
+</html>
+
